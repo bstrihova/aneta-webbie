@@ -1,0 +1,51 @@
+/* MY SKILLS */
+.myskills {
+  display: flex;
+  flex-direction: column;
+  min-width: 600px;
+  color: $green;
+  background-color: $white;
+}
+
+h2 {
+  text-transform: uppercase;
+  font-size: 2rem;
+  margin-top: 0;
+
+  @media (min-width: $tablet) {
+    margin-top: auto;
+  }
+}
+
+.myskills .progressbar {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin: 0.2 * $margin;
+}
+
+.progressbar .technology {
+  background-color: $text-gray;
+  color: $light-gray;
+  width: 10%;
+  padding: 0.2 * $padding;
+}
+
+.progressbar .progress {
+  width: 50%;
+  padding: 0.2 * $padding;
+  background: linear-gradient(90deg, $green 80%, $light-gray 20%);
+  text-align: right;
+  color: gray;
+}
+
+.progress.svnty {
+  background: linear-gradient(90deg, $green 70%, $light-gray 30%);
+}
+.progress.sxty {
+  background: linear-gradient(90deg, $green 60%, $light-gray 40%);
+}
+.progress.ffty {
+  background: linear-gradient(90deg, $green 50%, $light-gray 50%);
+}

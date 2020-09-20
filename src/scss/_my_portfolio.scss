@@ -1,0 +1,38 @@
+/* MY PORTFOLIO */
+
+.myportfolio {
+  background-color: $green;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.myportfolio h2 {
+  flex-basis: 100%;
+  color: $white;
+}
+
+figure {
+  font-size: 0.8em;
+  flex-basis: 29%;
+  background-color: $white;
+  margin: 0.3 * $margin;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  padding: 0.1em 0.3em 0.3em 0.1em;
+}
+
+figure img {
+  min-height: 120px;
+}
+
+figure img,
+figure figcaption {
+  background-color: $light-gray;
+  border: 0.3em $white solid;
+  text-align: justify;
+  padding: 0 (0.3 * $padding);
+}

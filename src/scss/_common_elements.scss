@@ -1,0 +1,36 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Alegreya Sans", sans-serif;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  // justify-content: center;
+  align-items: center;
+  background-color: $light-gray;
+}
+
+/* MAIN */
+.myskills,
+.myportfolio,
+.aboutme,
+.social,
+.contactme,
+footer {
+  padding-top: 2 * $padding;
+  padding-bottom: 2 * $padding;
+
+  @media (min-width: $tablet) {
+    padding: 3 * $padding;
+  }
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

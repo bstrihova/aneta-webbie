@@ -1,0 +1,71 @@
+/* CIRCLE COLUMNS */
+.circlecolumns {
+  background-color: $dark-gray;
+  color: $light-gray;
+
+  h3 {
+    color: $green;
+    margin: $margin/2;
+  }
+
+  @media (min-width: $tablet) {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    width: 100vw;
+
+    h3 {
+      margin-top: 4 * $margin;
+      margin-bottom: 0;
+    }
+  }
+
+  .columns {
+    display: flex;
+    flex-direction: column;
+    padding: $padding;
+
+    .column {
+      width: 100vw;
+      margin: auto;
+      padding: $padding * 2;
+
+      &:before {
+        display: none;
+      }
+
+      p {
+        margin: 0;
+      }
+    }
+
+    @media (min-width: $tablet) {
+      flex-direction: row;
+      overflow: hidden;
+      max-width: 1200px;
+
+      .column {
+        padding-top: 0;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        &:before {
+          display: block;
+          content: "";
+          position: absolute;
+          top: -3em;
+          overflow: hidden;
+          border: 3em solid;
+          border-radius: 50%;
+        }
+
+        p {
+          margin: $margin;
+        }
+      }
+    }
+  }
+}

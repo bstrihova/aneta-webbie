@@ -1,0 +1,75 @@
+.banner {
+  position: relative;
+  background: $dark-gray;
+  min-height: 500px;
+  color: $white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0.6;
+    background-image: url(../img/cool-background.png);
+    background-size: cover;
+  }
+
+  .h1div {
+    font-size: 1.5rem;
+    z-index: 2;
+    line-height: 2.5em;
+    font-weight: 200;
+  }
+
+  /* i want the H1 to be in 1/3 of the page */
+  .h1before,
+  .h1after {
+    flex-grow: 0;
+  }
+
+  h1 span {
+    border-bottom: $white 0.2em solid;
+    color: $green;
+    font-weight: 900;
+  }
+
+  @media (min-width: $tablet) {
+    margin-top: 0.2 * $margin;
+
+    .h1div {
+      font-size: 2rem;
+    }
+
+    .h1before {
+      flex-grow: 1;
+    }
+
+    .h1after {
+      flex-grow: 2;
+    }
+  }
+}
+/* SUBBANNER */
+
+.subbanner {
+  padding: $padding * 2;
+  background-color: $light-gray;
+  width: 100vw;
+  margin: auto;
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+
+  @media (min-width: $tablet) {
+    width: 80vw;
+  }
+}
