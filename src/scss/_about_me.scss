@@ -1,8 +1,6 @@
 /* ABOUT ME */
 
 .aboutme {
-  margin: auto;
-  width: 100vw;
   padding-left: $padding;
   padding-right: $padding;
   display: flex;
@@ -30,10 +28,8 @@
 
   img {
     border-radius: 50%;
-    min-width: 200px;
-    min-height: 200px;
-    max-width: 200px;
-    max-height: 200px;
+    width: 200px;
+    height: 200px;
     border: 1px solid black;
     margin-right: 2 * $margin;
   }

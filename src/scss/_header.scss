@@ -1,45 +1,102 @@
 header {
   display: flex;
   background-color: $white;
-  width: 100%;
+  width: 100vw;
   justify-content: space-between;
   align-items: center;
   padding: $padding;
+  // position: fixed;
+  z-index: 3;
 
-  h1 {
+  .logo h1 {
     margin: 0;
     padding: 0 $padding/2;
   }
 
-  nav {
-    display: none;
-    ul {
-      list-style: none;
-      padding-left: 0;
-      display: flex;
+  .menu {
+    &__hamburger {
+      @media (min-width: $tablet) {
+        display: none;
+      }
+      position: absolute;
+      /* always keep ham on top of everything */
+      z-index: 1000;
+      top: 20px;
+      right: 20px;
+      width: 36px;
+      height: 36px;
+      border: none;
+      cursor: pointer;
+      background-color: transparent;
+      /* show the menu image */
+      // background-image: url(../img/menu.png);
+      background-image: url("https://ljc-dev.github.io/testing0/ham.svg");
+      background-size: cover;
     }
 
-    a {
-      padding: $padding ($padding * 2);
-      background-color: $text-gray;
-      color: $light-gray;
-      text-decoration: none;
-      text-transform: uppercase;
+    &__nav {
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: $green;
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+      color: $white;
+      /* hide the menu above the screen by default */
+      transform: translateY(-100%);
+      /* transition adds a little animation when sliding in and out the menu */
+      transition: transform 0.2s ease;
+      display: flex;
+      flex-direction: column;
 
-      &:hover {
-        background-color: $green;
-        color: $text-gray;
+      @media (min-width: $tablet) {
+        flex-direction: row;
+        position: static;
+        width: auto;
+        height: auto;
+        top: auto;
+        left: auto;
+        overflow: inherit;
+        transform: translateY(0);
+        transition: none;
+      }
+
+      &__link {
+        padding: $padding ($padding * 2);
+        color: $white;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 1.5em;
+
+        &:hover {
+          color: $text-gray;
+        }
       }
     }
   }
 
   @media (min-width: $tablet) {
     padding: 0;
-    nav {
-      display: flex;
+    .menu__nav {
+      &__link {
+        background-color: $text-gray;
+        color: $light-gray;
+        font-size: 1em;
+        &:hover {
+          background-color: $green;
+          color: $text-gray;
+        }
+      }
     }
-    .burger {
-      display: none;
-    }
+  }
+  .showClose {
+    // background-image: url(../img/menu-close.png);
+    background-image: url("https://ljc-dev.github.io/testing0/ham-close.svg");
+  }
+
+  .showNav {
+    /* show the menu */
+    transform: translateY(0);
   }
 }

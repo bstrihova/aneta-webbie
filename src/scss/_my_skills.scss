@@ -2,7 +2,7 @@
 .myskills {
   display: flex;
   flex-direction: column;
-  min-width: 600px;
+  min-width: 70%;
   color: $green;
   background-color: $white;
 }
@@ -19,7 +19,6 @@ h2 {
 
 .myskills .progressbar {
   display: flex;
-  width: 100%;
   justify-content: center;
   align-items: center;
   margin: 0.2 * $margin;

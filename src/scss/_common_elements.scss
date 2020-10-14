@@ -2,6 +2,11 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-padding-top: 50px;
+  width: 100%;
+}
+
 body {
   font-family: "Alegreya Sans", sans-serif;
   padding: 0;
@@ -9,9 +14,11 @@ body {
   text-align: center;
   display: flex;
   flex-direction: column;
-  // justify-content: center;
+  justify-content: center;
   align-items: center;
   background-color: $light-gray;
+  // background-color: red;
+  width: 100%;
 }
 
 /* MAIN */
@@ -33,4 +40,10 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  width: 100%;
+}
+
+//deletes the ugly blue border when btn is focused
+button:focus {
+  outline: 0;
 }

@@ -2,25 +2,27 @@
 
 .social {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: auto;
   width: 100vw;
   background-color: $dark-gray;
   color: $white;
 
   h3 {
     text-transform: uppercase;
-    flex-basis: 100%;
     font-size: 1.5em;
   }
 
-  img {
-    border-radius: 50%;
-    flex-basis: 20%;
-    border: 1px solid $white;
-    margin-right: 2 * $margin;
+  &__icons {
+    width: 300px;
+    display: flex;
+    justify-content: center;
+
+    img {
+      width: 30px;
+      margin: $margin;
+    }
   }
 }
 
@@ -44,7 +46,6 @@
     max-width: 600px;
     justify-content: center;
     margin: auto;
-
     @media (min-width: $tablet) {
       flex-direction: row;
       flex-wrap: wrap;
@@ -61,6 +62,7 @@
       &:active {
         color: $light-gray;
         opacity: 1; /* Firefox */
+        outline: none;
       }
 
       @media (min-width: $tablet) {
@@ -109,11 +111,16 @@
 /* FOOTER */
 footer {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  align-items: center;
 }
+
 .headlinewithlines {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
+  justify-content: flex-start;
 }
 
 h2 {
@@ -123,18 +130,8 @@ h2 {
 .h2po {
   height: 5px;
   display: block;
-  width: 150px;
+  width: 80px;
   background-color: $green;
   content: "";
   margin: 0 $margin;
-}
-
-.socialicons {
-  display: flex;
-  justify-content: center;
-  margin-bottom: $margin;
-}
-
-.socialicons img {
-  margin-right: $margin;
 }
